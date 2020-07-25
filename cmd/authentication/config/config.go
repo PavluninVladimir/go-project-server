@@ -1,4 +1,4 @@
-package main
+package config
 
 import (
 	"fmt"
@@ -10,16 +10,14 @@ import (
 var Config appConfig
 
 type appConfig struct {
-	// Example Variable
 	ConfigVar string
 }
 
 // LoadConfig loads config from files
 func LoadConfig(configPaths ...string) error {
 	v := viper.New()
-	v.SetConfigName("example")
+	v.SetConfigName("config")
 	v.SetConfigType("yaml")
-	v.SetEnvPrefix("blueprint")
 	v.AutomaticEnv()
 	for _, path := range configPaths {
 		v.AddConfigPath(path)
