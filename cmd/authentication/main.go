@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/PavluninVladimir/go-project-server/cmd/authentication/config"
 )
 
 func main() {
